@@ -52,7 +52,7 @@ To create a pipeline:
 **Note**: To avoid unexpected results, we recommend that you preview processor output with your sample data.
 1. On the **Metric Extraction** tab, define metrics to create and aggregate from your data. To learn more about metrics, see [Metrics](https://docs.dynatrace.com/docs/analyze-explore-automate/metrics). 
 2. On the **Data Extraction** tab, extract data from your pipeline to re-ingest it as a different data type into another pipeline.
-3. On the **Permission** tab, specify the security context for your data. To learn more about this, see [Permissions in Grail].(https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model/assign-permissions-in-grail#grail-permissions-record)
+3. On the **Permission** tab, specify the security context for your data. To learn more about this, see [Permissions in Grail](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model/assign-permissions-in-grail#grail-permissions-record).
 4. On the **Storage** tab, specify Grail buckets to which your data should be assigned. See [Grail data model](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model) to learn more.
 5.  **Save** the pipeline and verify if it's been added to the **Pipelines** table.
 
