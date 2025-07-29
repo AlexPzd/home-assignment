@@ -78,12 +78,13 @@ Pipelines process data in stages. Each stage lets you use configurable **process
 | Storage | Specify data containers (Grail buckets) where your data should be stored. See [Grail data model](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model) to learn more. |
 
 **Note**: To avoid unexpected results, we recommend that you preview processor output with your sample data.
+1. On the **Metric Extraction** tab, define metrics to create and aggregate from your data. To learn more about metrics, see [Metrics](https://docs.dynatrace.com/docs/analyze-explore-automate/metrics). 
+2. On the **Data Extraction** tab, extract data from your pipeline to re-ingest it as a different data type into another pipeline.
+3. On the **Permission** tab, specify the security context for your data. To learn more about this, see [Permissions in Grail](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model/assign-permissions-in-grail#grail-permissions-record).
+4. On the **Storage** tab, specify Grail buckets to which your data should be assigned. See [Grail data model](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model) to learn more.
+5.  **Save** the pipeline and verify if it's been added to the **Pipelines** table.
 
-5. **Save** the pipeline and verify that it's been added to the **Pipelines** table.
-
-### Configure Dynamuc Routing
-
-In OpenPipeline, one of the ways to direct incoming data into different streams is dynamic routing which assigns data to a given pipeline based on the matching conditions. To configure dynamic routing for your pipeline:
+To set up dynamic routing for your pipeline:
 
 1. Go to **Settings > Process and contextualize > OpenPipeline**.
 2. Select the pipeline's data type for ingestion.
@@ -103,3 +104,4 @@ To learn how to verify the result, see [Verify the configuration](https://docs.d
 [Processing](https://docs.dynatrace.com/docs/shortlink/openpipeline-processing) \
 [OpenPipeline processing examples](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/use-cases/processing-examples) \
 [Configure a processing pipeline](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/getting-started/tutorial-configure-processing)
+---
