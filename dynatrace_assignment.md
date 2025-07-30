@@ -43,7 +43,6 @@ In this tutorial, you'll learn how to separate and process your incoming raw dat
 ### Prior knowledge
 
    * Dynatrace Query Language.
-   * 
 
 ### Prerequisites
 
@@ -54,19 +53,21 @@ In this tutorial, you'll learn how to separate and process your incoming raw dat
 
 |Term|Description| 
 |:-----|:------|
-|Ingest sources|Source of ingestion for a data type, collecting data from the provider into Dynatrace Platform, for example, API endpoints or OneAgent.|
-|Pipeline|Collection of processing instructions to structure, separate, and store data.|
-|Processor|Pre-formatted processing instruction.|
-|Routing|Assignation of data to a pipeline, based either on matching conditions (dynamic routing) or directly configured (static).|
-|Stage|Phase in a pipeline sequence, focused on a task and defined by processors.|
-
-
+|Ingest sources| Source of ingestion for a data type, collecting data from the provider into the Dynatrace Platform.|
+|Pipeline| Collection of processing instructions to structure, separate, and store data.|
+|Processor| Pre-formatted processing instruction.|
+|Routing| Assignation of data to a pipeline, based either on matching conditions (dynamic routing) or directly configured (static).|
+|Stage| Phase in a pipeline sequence, focused on a task and defined by processors.|
 
 ## Steps
 
 ### Context: Data Separation
 
 Data-driven organizations often face the challenge of data quality issues. They may encounter inconsistency, duplication, missing values, incompatible formats, or lack of structure in their raw data, which may lead to additional costs. Whether you're a retail company looking to improve their data to reduce the cost of a marketing campaign or a e-commerce platform trying to pinpoint the root cause of performance slowdowns and failed transactions, OpenPipeline provides a solution for your data quality issues. It separates, cleans up, and reshapes your incoming data, preparing it for its intended use and enabling you to focus on its specific subsets. OpenPipeline makes observability, security, and business analysis easier and more streamlined. 
+
+### Use cases
+
+   * Prepare, transform, and store data in Grail.
 
 OpenPipeline enables you to split and direct incoming data streams into pipelines for the ease of transformation and storage. To configure data separation in OpenPipeline, you need to:
 
@@ -79,10 +80,9 @@ Pipelines process data in stages. Each stage lets you use configurable **process
 
 **Note**: When setting up the pipelines, keep in mind that different data sources use different processors. To learn more about processors, see [Processor](https://docs.dynatrace.com/docs/shortlink/openpipeline-processing#processor).
 
-1. Go to **Settings > Process and contextualize > OpenPipeline**.
-2. In the **OpenPipeline** menu, select the data type for ingestion. 
-3. On the **Pipelines** tab, select **+Pipeline** and provide a name for your pipeline.
-4. Configure pipeline stages where applicable: 
+1. Go to **Settings > Process and contextualize > OpenPipeline** and select the data type for ingestion.
+2. On the **Pipelines** tab, select **+Pipeline** and provide a name for your pipeline.
+3. Configure pipeline stages where applicable: 
 | Stage | Action |  
 | :----- | :----- |
 | Processing | Select and set up processors to handle your data.  |
@@ -93,19 +93,14 @@ Pipelines process data in stages. Each stage lets you use configurable **process
 
 **Note**: To avoid unexpected results, we recommend that you preview processor output with your sample data.
 
-1. On the **Metric Extraction** tab, define metrics to create and aggregate from your data. To learn more about metrics, see [Metrics](https://docs.dynatrace.com/docs/analyze-explore-automate/metrics). 
-2. On the **Data Extraction** tab, extract data from your pipeline to re-ingest it as a different data type into another pipeline.
-3. On the **Permission** tab, specify the security context for your data. To learn more about this, see [Permissions in Grail](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model/assign-permissions-in-grail#grail-permissions-record).
-4. On the **Storage** tab, specify Grail buckets to which your data should be assigned. See [Grail data model](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model) to learn more.
 5.  **Save** the pipeline and verify if it's been added to the **Pipelines** table.
 
 To set up dynamic routing for your pipeline:
 
-1. Go to **Settings > Process and contextualize > OpenPipeline**.
-2. Select the pipeline's data type for ingestion.
-3. On the **Dynamic Routing** tab, select **+Dynamic Route**.
-4. Add the name, matching condition, and select the pipeline from the drop-down.
-5. **Add** the new dynamic route and verify that it's been saved to the **Dynamic routing** table.
+1. Go to **Settings > Process and contextualize > OpenPipeline** and select the data type for the pipeline.
+2. On the **Dynamic Routing** tab, select **+Dynamic Route**.
+3. Add the name, matching condition, and select the pipeline from the drop-down.
+4. **Add** the new dynamic route and verify that it's been saved to the **Dynamic routing** table.
 
 ## Result
 
@@ -114,7 +109,7 @@ You've successfully configured a new pipeline to separate your data. Once you've
 To learn how to verify the result, see [Verify the configuration](https://docs.dynatrace.com/docs/shortlink/openpipeline-log-processing#verify).
 
 ## Related topics
-
+---
 [Data Flow](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/concepts/data-flow) \
 [Processing](https://docs.dynatrace.com/docs/shortlink/openpipeline-processing) \
 [OpenPipeline processing examples](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/use-cases/processing-examples) \
