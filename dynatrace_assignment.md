@@ -29,40 +29,48 @@ published: false
 ---
 
 # Separate and Process Data in OpenPipeline
-<details> 
+
 ## Before you begin
 
-
-
-
-### Who this is for
-
+<details>
+<summary>Who this is for</summary>
 This tutorial is intended for Dynatrace administrators controlling data ingestion configuration.
+</details>
 
-### What you will learn
+<details>
+<summary>What you will learn</summary>
 
 In this tutorial, you'll learn how to separate and process your incoming raw data using OpenPipeline.
+</details>
 
-### Use cases
-
+<details>
+<summary>Use cases</summary>
    * Preparation, transformation, and data storage in Grail.
+</details>
 
-### Prior knowledge
+<details>
+<summary>Prior knowledge</summary>
 
    * [Dynatrace Query Language](https://docs.dynatrace.com/docs/discover-dynatrace/references/dynatrace-query-language)
+</details>
 
-### Prerequisites
+<details>
+<summary>Prerequisites</summary>
 
    * Latest Dynatrace environment
    * Raw data for ingestion
+</details>
 
-### Applies to
+<details>
+<summary>Applies to</summary>
 
    * Davis AI
    * Grail 
    * Notebooks
+</details>
 
-### Glossary
+<details>
+<summary>Glossary</summary>
 
 |Term|Description| 
 |:-----|:------|
@@ -71,7 +79,6 @@ In this tutorial, you'll learn how to separate and process your incoming raw dat
 |Processor| Pre-formatted processing instructions to apply to the data in the pipeline.|
 |Routing| Assignation of data to a pipeline, based either on matching conditions (dynamic routing) or directly configured (static).|
 |Stage| Part of the pipeline processing sequence defined by the processors it contains.|
-
 </details>
 
 ## Steps
