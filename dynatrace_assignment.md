@@ -20,7 +20,7 @@ keywords:
   - Processors
   - Stages
 date: 2025-07-28
-lastmod: 2025-07-29
+lastmod: 2025-07-30
 author: Alex Pozdejev
 type: tutorial
 audience: administrator
@@ -46,7 +46,7 @@ In this tutorial, you'll learn how to separate and process your incoming raw dat
 
 ### Prerequisites
 
-   * Latest Dynatrace environment
+   * Latest Dynatrace environment.
    * Raw data for ingestion.
 
 ### Glossary
@@ -63,7 +63,7 @@ In this tutorial, you'll learn how to separate and process your incoming raw dat
 
 ### Context: Data Separation
 
-Data-driven organizations often face the challenge of data quality issues. They may encounter inconsistency, duplication, missing values, incompatible formats, or lack of structure in their raw data, which may lead to additional costs. Whether you're a retail company looking to improve their data to reduce the cost of a marketing campaign or a e-commerce platform trying to pinpoint the root cause of performance slowdowns and failed transactions, OpenPipeline provides a solution for your data quality issues. It separates, cleans up, and reshapes your incoming data, preparing it for its intended use and enabling you to focus on its specific subsets. OpenPipeline makes observability, security, and business analysis easier and more streamlined. 
+Data-driven organizations often face the challenge of data quality issues. Inconsistencies, duplication, missing values, incompatible formats, or lack of structure in raw data may increase your operational costs. Whether you're a retail company looking to improve your customer data to reduce the cost of a marketing campaign or a e-commerce platform trying to pinpoint the root cause of performance slowdowns and failed transactions, OpenPipeline provides a solution for your data quality issues. It separates, cleans up, and reshapes your incoming data, preparing it for its intended use and enabling you to focus on its specific subsets. OpenPipeline makes observability, security, and business analysis easier and more streamlined. 
 
 ### Use cases
 
@@ -80,9 +80,10 @@ Pipelines process data in stages. Each stage lets you use configurable **process
 
 **Note**: When setting up the pipelines, keep in mind that different data sources use different processors. To learn more about processors, see [Processor](https://docs.dynatrace.com/docs/shortlink/openpipeline-processing#processor).
 
-1. Go to **Settings > Process and contextualize > OpenPipeline** and select the data type for ingestion.
-2. On the **Pipelines** tab, select **+Pipeline** and provide a name for your pipeline.
-3. Configure pipeline stages where applicable:
+1. Go to **Settings > Process and contextualize > OpenPipeline**.
+2. Select the data type for ingestion.
+3. On the **Pipelines** tab, select **+Pipeline** and provide a name for your pipeline.
+4. Configure pipeline stages where applicable:
     
 |Stage|Action|  
 | :----- | :----- |
@@ -94,14 +95,15 @@ Pipelines process data in stages. Each stage lets you use configurable **process
 
 **Note**: To avoid unexpected results, we recommend that you preview processor output with your sample data.
 
-1.  **Save** the pipeline and verify if it's been added to the **Pipelines** table.
+5.  **Save** the pipeline and verify if it's been added to the **Pipelines** table.
 
 To set up dynamic routing for your pipeline:
 
-1. Go to **Settings > Process and contextualize > OpenPipeline** and select the data type for the pipeline.
-2. On the **Dynamic Routing** tab, select **+Dynamic Route**.
-3. Add the name, matching condition, and select the pipeline from the drop-down.
-4. **Add** the new dynamic route and verify that it's been saved to the **Dynamic routing** table.
+1. Go to **Settings > Process and contextualize > OpenPipeline**.
+2. Select the data type for the pipeline.
+3. On the **Dynamic Routing** tab, select **+Dynamic Route**.
+4. Add the name, matching condition, and select the pipeline from the drop-down.
+5. **Add** the new dynamic route and verify that it's been saved to the **Dynamic routing** table.
 
 ## Result
 
