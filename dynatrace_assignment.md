@@ -38,9 +38,10 @@ This tutorial is intended for Dynatrace administrators controlling data ingestio
 </details>
 
 <details>
-<summary>What you will learn</summary>
+<summary>What you'll learn</summary>
 
-In this tutorial, you'll learn how to separate and process your incoming raw data using OpenPipeline.
+You'll learn how to separate and process your incoming raw data using OpenPipeline.
+
 </details>
 
 <details>
@@ -78,23 +79,26 @@ In this tutorial, you'll learn how to separate and process your incoming raw dat
 |Pipeline| Collection of processing instructions to structure, separate, and store data.|
 |Processor| Pre-formatted processing instructions to apply to the data in the pipeline.|
 |Routing| Assignation of data to a pipeline, based either on matching conditions (dynamic routing) or directly configured (static).|
-|Stage| Part of the pipeline processing sequence defined by the processors it contains.|
+|Data separation| The process of diving incoming data into pipelines|
+|Stage| Part of the pipeline sequence defined by the processors it contains.|
 </details>
 
 ## Steps
 
 ### Context: Data Separation
 
-Data-driven organizations often face the challenge of data quality issues. Inconsistencies, duplication, missing values, incompatible formats, or a lack of structure in raw data may increase your operational costs. Whether you're a retail company setting up a data-based marketing campaign or an e-commerce platform investigating the root cause of a failed transaction, OpenPipeline provides a solution for your data quality issues. It separates, cleans up, and reshapes your incoming data, preparing it for its intended use and enabling you to focus on its specific subsets. 
+OpenPipeline provides a solution for your data quality issues. 
 
-To configure separation in OpenPipeline:
+It can separate, clean up, reshape, and enrich your incoming data with additional fields, preparing it for storage in Grail and analysis. Using OpenPipeline, you can address data quality issues such as inconsistencies, duplication, missing values, incompatible formats, or a lack of structure in your incoming data.
 
-1. Configure a pipeline to split the incoming data streams.
-2. Configure a dynamic route to direct the data to a specific pipeline.
+To separate and process data in OpenPipeline:
+
+1. Configure a pipeline to separate and process the incoming data streams.
+2. Configure a dynamic route to direct any incoming data to a specific pipeline matching your pre-defined conditions.
 
 ### Configure a pipeline
 
-Pipelines process data in stages. Each stage lets you use configurable **processors** to define the future shape of your data. 
+Pipelines process separated data in stages. Each stage lets you use configurable **processors** to define the future shape of your data. 
 
 **Note**: When setting up the pipelines, keep in mind that different data sources use different processors. To learn more about processors, see [Processor](https://docs.dynatrace.com/docs/shortlink/openpipeline-processing#processor).
 
@@ -103,6 +107,7 @@ To configure a pipeline:
 2. Select the data type for ingestion.
 3. On the **Pipelines** tab, select **+Pipeline** and provide a name for your pipeline.
 4. Set up pipeline stages where applicable:
+   
 |Stage|Action|  
 | :----- | :----- |
 | Processing | Select and set up processors to handle your data.  |
@@ -113,11 +118,11 @@ To configure a pipeline:
 
 **Note**: To avoid unexpected results, we recommend that you preview processor output with your sample data.
 
-5.  **Save** the pipeline and verify if it's been added to the **Pipelines** table.
+1.  **Save** the pipeline and verify if it's been added to the **Pipelines** table.
 
 ### Route data to a pipeline
 
-OpenPipeline determines where to direct your incoming data by evaluating it against the matching conditions, the process known as Dynamic routing. 
+You can configure OpenPipeline to dynamically route incoming data into different downstream pipelines/targets/destinations based on conditions you define.
 
 To configure dynamic routing for your pipeline:
 1. Go to **Settings > Process and contextualize > OpenPipeline**.
@@ -137,6 +142,7 @@ To learn how to verify the result, see [Verify the configuration](https://docs.d
 
 ## Related topics
 [Data Flow](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/concepts/data-flow) \
+[What is Dynatrace Grail data lakehouse?](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/dynatrace-grail)
 [Processing](https://docs.dynatrace.com/docs/shortlink/openpipeline-processing) \
 [OpenPipeline processing examples](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/use-cases/processing-examples) \
 [Configure a processing pipeline](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/getting-started/tutorial-configure-processing)
