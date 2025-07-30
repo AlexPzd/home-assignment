@@ -29,8 +29,11 @@ published: false
 ---
 
 # Separate and Process Data in OpenPipeline
-
+<details> 
 ## Before you begin
+
+
+
 
 ### Who this is for
 
@@ -69,11 +72,13 @@ In this tutorial, you'll learn how to separate and process your incoming raw dat
 |Routing| Assignation of data to a pipeline, based either on matching conditions (dynamic routing) or directly configured (static).|
 |Stage| Part of the pipeline processing sequence defined by the processors it contains.|
 
+</details>
+
 ## Steps
 
 ### Context: Data Separation
 
-Data-driven organizations often face the challenge of data quality issues. Inconsistencies, duplication, missing values, incompatible formats, or a lack of structure in raw data may increase your operational costs. Whether you're a retail company setting up a data-based marketing campaign or a e-commerce platform investigating the root cause of a failed transaction, OpenPipeline provides a solution for your data quality issues. It separates, cleans up, and reshapes your incoming data, preparing it for its intended use and enabling you to focus on its specific subsets. 
+Data-driven organizations often face the challenge of data quality issues. Inconsistencies, duplication, missing values, incompatible formats, or a lack of structure in raw data may increase your operational costs. Whether you're a retail company setting up a data-based marketing campaign or an e-commerce platform investigating the root cause of a failed transaction, OpenPipeline provides a solution for your data quality issues. It separates, cleans up, and reshapes your incoming data, preparing it for its intended use and enabling you to focus on its specific subsets. 
 
 To configure separation in OpenPipeline:
 
