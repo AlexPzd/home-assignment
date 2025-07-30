@@ -82,18 +82,19 @@ Pipelines process data in stages. Each stage lets you use configurable **process
 
 1. Go to **Settings > Process and contextualize > OpenPipeline** and select the data type for ingestion.
 2. On the **Pipelines** tab, select **+Pipeline** and provide a name for your pipeline.
-3. Configure pipeline stages where applicable: 
-| Stage | Action |  
+3. Configure pipeline stages where applicable:
+    
+|Stage|Action|  
 | :----- | :----- |
 | Processing | Select and set up processors to handle your data.  |
 | Metric extraction | Capture new data from your raw data (e.g. data object string length) by defining metrics to create and aggregate from your data. To learn more about metrics, see [Metrics](https://docs.dynatrace.com/docs/analyze-explore-automate/metrics).|
-| Data extraction | Extract data from your pipeline to re-ingest it as a different data type into another pipeline. |
+| Data extraction | Extract data from your pipeline to re-ingest it as a different data type into another pipeline.|
 | Permission | Specify the security context for your data. To learn more about security, see [Permissions in Grail](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model/assign-permissions-in-grail#grail-permissions-record). |
-| Storage | Specify data containers (Grail buckets) where your data should be stored. See [Grail data model](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model) to learn more. |
+| Storage | Specify data containers (Grail buckets) where your data should be stored. See [Grail data model](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model) to learn more.|
 
 **Note**: To avoid unexpected results, we recommend that you preview processor output with your sample data.
 
-5.  **Save** the pipeline and verify if it's been added to the **Pipelines** table.
+1.  **Save** the pipeline and verify if it's been added to the **Pipelines** table.
 
 To set up dynamic routing for your pipeline:
 
@@ -109,9 +110,7 @@ You've successfully configured a new pipeline to separate your data. Once you've
 To learn how to verify the result, see [Verify the configuration](https://docs.dynatrace.com/docs/shortlink/openpipeline-log-processing#verify).
 
 ## Related topics
----
 [Data Flow](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/concepts/data-flow) \
 [Processing](https://docs.dynatrace.com/docs/shortlink/openpipeline-processing) \
 [OpenPipeline processing examples](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/use-cases/processing-examples) \
 [Configure a processing pipeline](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/getting-started/tutorial-configure-processing)
----
