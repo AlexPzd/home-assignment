@@ -28,15 +28,6 @@ draft: true
 published: false
 ---
 
-<details>
-<summary>Notes from Author</summary>
-
-1. I've based the structure of this tutorial on tutorial-type topics I've seen in the OpenPipeline guide. My document deals with a generalized procedure of data separation and processing in OpenPipeline.
-2. I've included a Prerequisites section in the document to demonstrate that I think there should be such a section, but due to the limitations of the task, I don't have the full knowledge of what exactly the prerequisites for this procedure are.
-3. In this particular instance, I've decided to use a table to describe pipeline configuration to avoid repetition and for the ease of adding new information about individual steps in the future.
-   
-</details>
-
 # Process Data in OpenPipeline
 
 ## Before you begin
