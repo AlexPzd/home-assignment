@@ -34,37 +34,48 @@ published: false
 
 <details>
 <summary>Who this is for</summary>
-This tutorial is intended for Dynatrace administrators controlling data ingestion configuration.
+
+   * This tutorial is intended for Dynatrace administrators controlling data ingestion configuration.
+  
 </details>
 
 <details>
 <summary>What you'll learn</summary>
 
-You'll learn how to process your incoming raw data using OpenPipeline for further use.
+   * You'll learn how to process your incoming raw data using OpenPipeline for further use.
 
 </details>
 
 <details>
 <summary>Use cases</summary>
+
    * Data preparation, transformation (processing), and storage in Grail.
+  
 </details>
 
 <details>
 <summary>Prior knowledge</summary>
+
    * [Dynatrace Query Language](https://docs.dynatrace.com/docs/discover-dynatrace/references/dynatrace-query-language)
+
 </details>
 
 <details>
 <summary>Prerequisites</summary>
+
    * Latest Dynatrace environment
    * Data for ingestion
+  
 </details>
 
 <details>
 <summary>Applies to</summary>
+
    * Davis AI
+   * Dashboards
    * Grail 
    * Notebooks
+  
 </details>
 
 <details>
@@ -77,6 +88,7 @@ You'll learn how to process your incoming raw data using OpenPipeline for furthe
 |Processor| Pre-formatted processing instructions to apply to the data in the pipeline.|
 |Routing| Assignation of data to a pipeline, based either on matching conditions (dynamic routing) or directly configured (static).|
 |Stage| Part of the pipeline sequence defined by the processors it contains.|
+
 </details>
 
 ## Steps
@@ -94,7 +106,7 @@ To process your data with OpenPipeline:
 
 ### Configure a pipeline
 
-Pipelines process incoming data in stages. Each stage lets you use configurable **processors** to define the future shape of your data. 
+Pipelines process data in stages. Each stage lets you use configurable **processors** to define the future shape of your data. 
 
 **Note**: When setting up the pipelines, keep in mind that different data sources use different processors. To learn more about processors, see [Processor](https://docs.dynatrace.com/docs/shortlink/openpipeline-processing#processor).
 
@@ -102,17 +114,17 @@ To configure a pipeline:
 1. Go to **Settings > Process and contextualize > OpenPipeline**.
 2. Select the data type for ingestion.
 3. On the **Pipelines** tab, select **+Pipeline** and provide a name for your pipeline.
-4. Set up pipeline stages where applicable:
+4. Configure the pipeline stages where applicable:
    
 |Stage|Description|  
 | :----- | :----- |
-| Processing | Select and set up processors to handle your data.  |
-| Metric extraction | Capture new data from your incoming data (e.g. data object string length) by defining metrics to create and aggregate from your data. To learn more about metrics, see [Metrics](https://docs.dynatrace.com/docs/analyze-explore-automate/metrics).|
+| Processing | Select and set up processors to remove or mask sensitive data, add or remove fields, drop records, reshape data formats, or parse values.|
 | Data extraction | Extract data from your pipeline to re-ingest it as a different data type into another pipeline.|
-| Permission | Specify the security context for your data. To learn more about security, see [Permissions in Grail](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model/assign-permissions-in-grail#grail-permissions-record). |
-| Storage | Specify data containers (Grail buckets) where your data should be stored. See [Grail data model](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model) to learn more.|
+| Metric extraction | Capture new data from your source (e.g. data object string length) and save it as a metric. To learn more about metric extraction, see [Parse log lines and extract a metric](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/use-cases/tutorial-log-processing-pipeline#prior-knowledge).|
+| Permission | Define the security context for your data. To learn more about security, see [Permissions in Grail](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model/assign-permissions-in-grail#grail-permissions-record). |
+| Storage | Assign data containers (Grail buckets) to your data. See [Grail data model](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model) to learn more.|
 
-**Note**: To avoid unexpected results, we recommend that you preview processor output with your sample data.
+**Note**: To avoid unexpected results, we recommend previewing processor output using your sample data.
 
 1.  **Save** the pipeline and verify that it's been added to the **Pipelines** table.
 
@@ -132,9 +144,7 @@ To configure dynamic routing for your pipeline:
 
 ## Result
 
-You've successfully configured a new pipeline to separate your data. Once you've ingested and processed your data, it becomes available for analysis in Grail. 
-
-To learn how to verify the result, see [Verify the configuration](https://docs.dynatrace.com/docs/shortlink/openpipeline-log-processing#verify).
+You've successfully configured a new pipeline to separate your data. Once you've ingested and processed your data, it becomes available for storage and further analysis. 
 
 ## Related topics
 [Data Flow](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/concepts/data-flow) \
