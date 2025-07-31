@@ -20,13 +20,22 @@ keywords:
   - Processors
   - Stages
 date: 2025-07-28
-lastmod: 2025-07-30
+lastmod: 2025-07-31
 author: Alex Pozdejev
 type: tutorial
 audience: administrator
 draft: true
 published: false
 ---
+
+<details>
+<summary>Notes from Author</summary>
+
+1. I've based the structure of this tutorial on tutorial-type topics I've seen in the OpenPipeline guide. My document deals with a generalized procedure of data separation and processing in OpenPipeline.
+2. I've included a Prerequisites section in the document to demonstrate that I think there should be such a section, but due to the limitations of the task, I don't have the full knowledge of what exactly the prerequisites for this procedure are.
+3. In this particular instance, I've decided to use a table to describe pipeline configuration to avoid repetition and for the ease of adding new information about individual steps in the future.
+   
+</details>
 
 # Process Data in OpenPipeline
 
@@ -74,6 +83,7 @@ published: false
    * Davis AI
    * Dashboards
    * Grail 
+   * OpenPipeline
    * Notebooks
   
 </details>
@@ -101,14 +111,14 @@ To process your data with OpenPipeline:
 1. Configure a pipeline. Pipelines use instructions to process your data.
 2. Configure a dynamic route. They direct your data into specific pipelines, based on the matching conditions.
 
-**Note**: to help with routing and processing your data from custom ingest sources, you can pre-process it. To learn more about this, see [Pre-processing](https://docs.dynatrace.com/docs/shortlink/openpipeline-dataflow#pre-processing).
+> **Note**: to help with routing and processing your data from custom ingest sources, you can pre-process it. To learn more about this, see [Pre-processing](https://docs.dynatrace.com/docs/shortlink/openpipeline-dataflow#pre-processing).
 
 
 ### Configure a pipeline
 
 Pipelines process data in stages. Each stage lets you use configurable **processors** to define the future shape of your data. 
 
-**Note**: When setting up the pipelines, keep in mind that different data sources use different processors. To learn more about processors, see [Processor](https://docs.dynatrace.com/docs/shortlink/openpipeline-processing#processor).
+> **Note**: When setting up the pipelines, keep in mind that different data sources use different processors. To learn more about processors, see [Processor](https://docs.dynatrace.com/docs/shortlink/openpipeline-processing#processor).
 
 To configure a pipeline:
 1. Go to **Settings > Process and contextualize > OpenPipeline**.
@@ -124,7 +134,7 @@ To configure a pipeline:
 | Permission | Define the security context for your data. To learn more about security, see [Permissions in Grail](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model/assign-permissions-in-grail#grail-permissions-record). |
 | Storage | Assign data containers (Grail buckets) to your data. See [Grail data model](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/data-model) to learn more.|
 
-**Note**: To avoid unexpected results, we recommend previewing processor output using your sample data.
+> **Note**: To avoid unexpected results, we recommend previewing processor output using your sample data.
 
 1.  **Save** the pipeline and verify that it's been added to the **Pipelines** table.
 
@@ -137,7 +147,7 @@ To configure dynamic routing for your pipeline:
 2. Select the data type used for the pipeline.
 3. On the **Dynamic Routing** tab, select **+Dynamic Route**.
 4. Specify:
-   * Name
+   * Route name
    * Matching condition
    * Target pipeline.
 5. **Add** the new dynamic route and verify that it's been saved to the **Dynamic routing** table.
@@ -148,7 +158,7 @@ You've successfully configured a new pipeline to separate your data. Once you've
 
 ## Related topics
 [Data Flow](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/concepts/data-flow) \
-[What is Dynatrace Grail data lakehouse?](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/dynatrace-grail)
+[What is Dynatrace Grail data lakehouse?](https://docs.dynatrace.com/docs/discover-dynatrace/platform/grail/dynatrace-grail) \
 [Processing](https://docs.dynatrace.com/docs/shortlink/openpipeline-processing) \
 [OpenPipeline processing examples](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/use-cases/processing-examples) \
 [Configure a processing pipeline](https://docs.dynatrace.com/docs/discover-dynatrace/platform/openpipeline/getting-started/tutorial-configure-processing)
