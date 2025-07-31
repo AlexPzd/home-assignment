@@ -127,7 +127,7 @@ To configure a pipeline:
 
 > **Note**: To avoid unexpected results, we recommend previewing processor output using your sample data.
 
-1.  **Save** the pipeline and verify that it's been added to the **Pipelines** table.
+5.  **Save** the pipeline and verify that it's been added to the **Pipelines** table.
 
 ### Route data to a pipeline
 
